@@ -10,7 +10,7 @@ from pennylane import numpy as pnp
 class SmartGridEnv:
     def __init__(self):
         # Load IEEE 118-bus system
-        self.net = nw.IEEE118()
+        self.net = nw.case118()
         # Add Renewable Integration at Bus 10
         pp.create_sgen(self.net, 10, p_mw=50, q_mvar=10, name="Wind Farm")
         
